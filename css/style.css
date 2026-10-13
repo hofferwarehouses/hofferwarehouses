@@ -1,0 +1,83 @@
+/*
+  This is a CSS COMMENT. CSS controls how the page LOOKS:
+  colors, fonts, spacing, and layout.
+
+  Every CSS rule has this shape:
+
+    selector {
+      property: value;
+    }
+
+  The SELECTOR says which HTML elements the rule applies to.
+  Read lessons/03-css-basics.md alongside this file.
+*/
+
+/* Variables: define a color once and reuse it everywhere.
+   Change a value here and the whole site updates. */
+:root {
+  --main-color: #1f4e79;   /* dark blue */
+  --accent-color: #e8a33d; /* gold */
+  --text-color: #222222;
+  --background: #fafafa;
+  --max-width: 900px;
+}
+
+/* "body" selects the <body> element, so this styles the whole page. */
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--background);
+}
+
+/* A selector starting with a dot (.) selects a CLASS.
+   In the HTML, <header class="site-header"> is matched by this rule. */
+.site-header {
+  background: var(--main-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.site-title {
+  margin: 0;
+}
+
+/* "nav a" means: any <a> link that is INSIDE a <nav>. */
+nav a {
+  color: white;
+  margin: 0 0.75rem;
+  text-decoration: none;
+}
+
+/* ":hover" applies only while the mouse is over the link. */
+nav a:hover {
+  color: var(--accent-color);
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto; /* "auto" left and right margins center the content */
+  padding: 1rem;
+}
+
+.hero {
+  background: white;
+  border-left: 6px solid var(--accent-color);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Images never get wider than their container (good for phones). */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  color: #666666;
+  font-size: 0.9rem;
+}

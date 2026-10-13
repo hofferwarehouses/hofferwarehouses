@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+  Hi! This is an HTML COMMENT. The browser ignores everything between
+  the opening and closing comment markers, so we use comments to leave
+  notes for ourselves.
+
+  This file is named "index.html". Web servers show "index.html"
+  automatically when someone visits your domain, so this is your HOME PAGE.
+
+  Read lessons/02-html-basics.md alongside this file.
+-->
+<html lang="en">
+  <head>
+    <!-- The <head> holds information ABOUT the page. Visitors don't see it. -->
+    <meta charset="UTF-8">
+    <!-- This line makes the page look right on phones: -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title shows in the browser tab and in Google results: -->
+    <title>My Website</title>
+    <meta name="description" content="A short sentence about this website for search engines.">
+    <!-- This connects our CSS (style) file to this page: -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <!-- The <body> holds everything visitors actually see. -->
+
+    <header class="site-header">
+      <h1 class="site-title">My Website</h1>
+      <nav>
+        <!-- Each <a> is a link. "href" is where the link goes. -->
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Welcome back!</h2>
+        <p>This website is being rebuilt. Check back soon.</p>
+      </section>
+
+      <section>
+        <h2>About this site</h2>
+        <!-- <p> means "paragraph". -->
+        <p>
+          This is a starter page. Once the old site's files are in the
+          <code>old-site</code> folder, we will move the real content in here.
+        </p>
+        <!-- <ul> is a bulleted list; each <li> is one item in it. -->
+        <ul>
+          <li>Item one</li>
+          <li>Item two</li>
+          <li>Item three</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <!-- &copy; is a code for the © symbol. -->
+      <p>&copy; 2026 My Website</p>
+    </footer>
+  </body>
+</html>
