@@ -22,21 +22,34 @@ rondeposit/
 
 ## The plan
 
+- [ ] **0. Create the `main` branch** (see below)
 - [ ] **1. Upload the old Turbify files** into `old-site/` (see below)
 - [ ] **2. Learn the basics**: lessons 1–3 (how websites work, HTML, CSS)
 - [ ] **3. Set up VS Code + Git** on your computer: lesson 4
 - [ ] **4. Rebuild the pages** using the old content, one page at a time
 - [ ] **5. Go live** at your domain: lesson 5 (GitHub Pages + Namecheap)
 
-### Step 1: Upload your old files (easiest way, no tools needed)
+### Step 0: Create the `main` branch (one time only)
+
+Right now the repo has a single branch with a long name. The live site
+will come from a branch called `main`, so create it first:
 
 1. Go to <https://github.com/ronniereddot/rondeposit>.
-2. Use the branch dropdown (top left, it may say `main`) to switch to the
-   `claude/turbify-website-resurrection-hxqgnb` branch.
-3. Click into the `old-site` folder.
-4. Click **Add file → Upload files**, then drag in your Turbify files and
+2. Click the branch dropdown (top left, showing
+   `claude/turbify-website-resurrection-hxqgnb`).
+3. Type `main` in the box, then click **Create branch main from
+   claude/turbify-website-resurrection-hxqgnb**.
+4. Go to **Settings → General → Default branch**, click the ⇄ arrows, choose
+   `main`, then click **Update** and confirm.
+
+### Step 1: Upload your old files (easiest way, no tools needed)
+
+1. Go to <https://github.com/ronniereddot/rondeposit>. Make sure the branch
+   dropdown says `main`.
+2. Click into the `old-site` folder.
+3. Click **Add file → Upload files**, then drag in your Turbify files and
    folders. If they're in a `.zip`, unzip it first.
-5. At the bottom, write a message like `Add original Turbify files`, then click
+4. At the bottom, write a message like `Add original Turbify files`, then click
    **Commit changes**.
 
 GitHub's web upload accepts up to 100 files at a time. If you have more, upload

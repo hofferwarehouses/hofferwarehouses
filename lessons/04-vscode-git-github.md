@@ -54,12 +54,16 @@ much more useful later than "updates".
 
 ## Branches in this project
 
-The starter files were created on a branch called
-`claude/turbify-website-resurrection-hxqgnb`. To put them on `main` (which is
-what the live website will use), you open a pull request on GitHub and merge
-it. You can do that from the repo's page on GitHub: a yellow banner offers
-**Compare & pull request**. After it's merged, switch to `main` in VS Code by
-clicking the branch name in the bottom-left corner.
+`main` is the branch the live website uses (you created it in Step 0 of the
+README). For your own small edits, working straight on `main` is fine.
+
+When I (Claude) make changes for you, they go on a separate branch named
+`claude/...`. To bring them into `main`, open the repo on GitHub. A yellow
+banner offers **Compare & pull request**. Click it, read through the changes,
+click **Create pull request**, then **Merge pull request**. Afterwards, pull in
+VS Code so your computer has the update. You can always see which branch
+you're on, and switch branches, from the branch name in VS Code's bottom-left
+corner.
 
 ## If something goes wrong
 
