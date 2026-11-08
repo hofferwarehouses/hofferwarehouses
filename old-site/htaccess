@@ -1,0 +1,16 @@
+RewriteEngine on
+RewriteCond %{DOCUMENT_ROOT}/.websites%{REQUEST_URI} -f
+RewriteRule ^(.*)$ .websites/$1 [L]
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{DOCUMENT_ROOT}/.websites/index.html -f
+RewriteRule ^(.*)$ .websites/index.html [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ $1 [L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php53” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php53 .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
