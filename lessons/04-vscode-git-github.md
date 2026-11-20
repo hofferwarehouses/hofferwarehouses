@@ -54,8 +54,8 @@ much more useful later than "updates".
 
 ## Branches in this project
 
-`main` is the branch the live website uses (you created it in Step 0 of the
-README). For your own small edits, working straight on `main` is fine.
+`main` is the branch the live website uses (you created it when you first
+uploaded the old files). For your own small edits, working straight on `main` is fine.
 
 When I (Claude) make changes for you, they go on a separate branch named
 `claude/...`. To bring them into `main`, open the repo on GitHub. A yellow

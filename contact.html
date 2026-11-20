@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+  contact.html — how to reach Hoffer Warehouses.
+
+  The old Turbify site had a contact form. Forms need a program on a
+  server to receive the message, and GitHub Pages only serves files,
+  so for now visitors call or email. A form service such as Formspree
+  can be added later.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Hoffer Warehouses</title>
+    <meta name="description" content="Contact Hoffer Warehouses at 359 Hamilton Street, Toledo, OH. Call 419-241-6001.">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <!-- ===== HEADER (same on every page) ===== -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html">HOFFER WAREHOUSES <span>TOLEDO, OH</span></a>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="history.html">History</a>
+          <a href="contact.html" class="current">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="two-column">
+        <div>
+          <h1>Contact us</h1>
+          <p>Connect with our team.</p>
+
+          <ul class="contact-list">
+            <li>
+              <strong>Phone</strong>
+              <!-- "tel:" links open the phone dialer on a mobile phone -->
+              <a href="tel:+14192416001">419-241-6001</a>
+            </li>
+            <li>
+              <strong>Email</strong>
+              <!-- "mailto:" links open the visitor's email program -->
+              <a href="mailto:sales@hofferwarehouses.com">sales@hofferwarehouses.com</a>
+            </li>
+            <li>
+              <strong>Address</strong>
+              359 Hamilton Street<br>
+              Toledo, OH 43604
+            </li>
+          </ul>
+        </div>
+
+        <!-- An <iframe> shows another web page inside this one: here, Google Maps. -->
+        <iframe class="map"
+                title="Map showing 359 Hamilton Street, Toledo, Ohio"
+                src="https://maps.google.com/maps?q=359+Hamilton+St,+Toledo,+OH+43604&amp;output=embed"
+                loading="lazy"></iframe>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER (same on every page) ===== -->
+    <footer class="site-footer">
+      <p><strong>HOFFER WAREHOUSES</strong></p>
+      <p>359 Hamilton Street, Toledo, OH 43604</p>
+      <p><a href="tel:+14192416001">419-241-6001</a> &middot; <a href="mailto:sales@hofferwarehouses.com">sales@hofferwarehouses.com</a></p>
+    </footer>
+  </body>
+</html>

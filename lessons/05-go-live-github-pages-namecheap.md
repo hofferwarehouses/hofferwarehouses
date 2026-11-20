@@ -1,9 +1,12 @@
 # Lesson 5: Going live with GitHub Pages and Namecheap
 
-Do this once the site is on the `main` branch (see Lesson 4). It has two
-halves: GitHub hosts the files, and Namecheap points your domain at GitHub.
+This puts the site online at **www.hofferwarehouses.com**. It has two halves:
+GitHub hosts the files, and Namecheap points your domain at GitHub.
 
-Below, replace `yourdomain.com` with your real domain.
+Before you start, make sure the new pages are on the `main` branch: on GitHub,
+with the branch dropdown set to `main`, you should see `services.html`,
+`history.html` and `contact.html` in the file list. If not, merge the pull
+request first (see Lesson 4).
 
 ## Part A: Turn on GitHub Pages
 
@@ -16,12 +19,16 @@ Below, replace `yourdomain.com` with your real domain.
 3. Go to **Settings → Pages**.
 4. Under **Build and deployment**: Source = **Deploy from a branch**,
    Branch = **main**, folder = **/ (root)**. Click **Save**.
-5. Wait a minute or two, then refresh. GitHub shows a link like
-   `https://ronniereddot.github.io/rondeposit/`. Open it. That's your site, live.
+5. Wait a minute or two, then refresh. The **Custom domain** box should already
+   say `www.hofferwarehouses.com`. That comes from the `CNAME` file in this
+   project. If the box is empty, type it in and click **Save**.
+
+Until Part B is done, GitHub will report a DNS problem. That's expected.
 
 ## Part B: Point Namecheap at GitHub
 
-1. Log in to Namecheap → **Domain List** → **Manage** next to your domain.
+1. Log in to Namecheap → **Domain List** → **Manage** next to
+   `hofferwarehouses.com`.
 2. On the **Domain** tab, under **Nameservers**, make sure it says
    **Namecheap BasicDNS**.
 3. Open the **Advanced DNS** tab. Under **Host Records**, delete Namecheap's
@@ -38,29 +45,42 @@ Below, replace `yourdomain.com` with your real domain.
    | A Record | `@`   | `185.199.111.153`         |
    | CNAME    | `www` | `ronniereddot.github.io.` |
 
-   Leave TTL on **Automatic**. `@` means the bare domain (`yourdomain.com`),
-   and `www` covers `www.yourdomain.com`.
+   Leave TTL on **Automatic**. `@` means `hofferwarehouses.com` without the
+   `www`, and the `www` row covers `www.hofferwarehouses.com`. With both, either
+   address works.
 
-   **Don't delete email records** (`MX` or `TXT` records) if you use email at
-   this domain.
+## Part C: Turn on HTTPS
 
-## Part C: Connect the two
-
-1. Back on GitHub: **Settings → Pages → Custom domain**. Type
-   `www.yourdomain.com` and click **Save**. GitHub adds a file named `CNAME` to
-   the repo. Leave it there; it's how GitHub knows your domain. (Pull it into
-   VS Code before your next edit.)
-2. GitHub checks your DNS. This can take from a few minutes up to 24 hours.
-3. When the check passes, tick **Enforce HTTPS** so the site gets the padlock.
+1. Back on GitHub, go to **Settings → Pages**. GitHub checks your DNS. This can
+   take from a few minutes up to 24 hours.
+2. When the check passes, tick **Enforce HTTPS** so the site gets the padlock.
    If the box is greyed out, wait a little longer and come back.
 
-Both `yourdomain.com` and `www.yourdomain.com` will now open your site.
+## Email: sales@hofferwarehouses.com
+
+The site shows `sales@hofferwarehouses.com`. When Turbify hosted the domain,
+Turbify also handled its email, so **that address probably doesn't receive
+mail any more.** Test it by sending it a message. If it doesn't arrive, choose
+one of these:
+
+- **Free email forwarding (easiest):** in Namecheap, open your domain →
+  **Domain** tab → **Redirect Email**. Add `sales` → your everyday email
+  address. Messages sent to sales@hofferwarehouses.com are then forwarded to
+  you. Namecheap adds the needed `MX` records itself.
+- **A real mailbox** (send and receive as sales@...): Namecheap Private Email,
+  Google Workspace or Microsoft 365 are all paid options.
+- **Or** change the address on the site to one that already works. It appears
+  in the footer of all four pages and on the contact page.
+
+Whatever you choose, don't delete `MX` or `TXT` records in Advanced DNS
+afterwards. Those carry the email.
 
 ## Recommended: verify your domain
 
 So nobody else can ever claim your domain on GitHub Pages: click your profile
-picture → **Settings → Pages → Add a domain**, and follow the steps. It gives
-you one `TXT` record to add in Namecheap's Advanced DNS.
+picture → **Settings → Pages → Add a domain**, enter `hofferwarehouses.com`,
+and follow the steps. It gives you one `TXT` record to add in Namecheap's
+Advanced DNS.
 
 ## Troubleshooting
 

@@ -1,65 +1,93 @@
 <!DOCTYPE html>
 <!--
-  Hi! This is an HTML COMMENT. The browser ignores everything between
-  the opening and closing comment markers, so we use comments to leave
-  notes for ourselves.
+  index.html — the HOME PAGE. Web servers show index.html automatically
+  when someone visits www.hofferwarehouses.com.
 
-  This file is named "index.html". Web servers show "index.html"
-  automatically when someone visits your domain, so this is your HOME PAGE.
-
-  Read lessons/02-html-basics.md alongside this file.
+  The header (top) and footer (bottom) are copied onto every page.
+  If you change the menu or the address, change it on all four pages.
 -->
 <html lang="en">
   <head>
-    <!-- The <head> holds information ABOUT the page. Visitors don't see it. -->
     <meta charset="UTF-8">
-    <!-- This line makes the page look right on phones: -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- The title shows in the browser tab and in Google results: -->
-    <title>My Website</title>
-    <meta name="description" content="A short sentence about this website for search engines.">
-    <!-- This connects our CSS (style) file to this page: -->
+    <title>Hoffer Warehouses | Affordable Warehousing in Toledo, OH</title>
+    <meta name="description" content="Clean, dry, secure warehouse space in downtown Toledo, Ohio, starting as low as $0.15 per square foot. Over 60 years in the warehousing business.">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-    <!-- The <body> holds everything visitors actually see. -->
-
+    <!-- ===== HEADER (same on every page) ===== -->
     <header class="site-header">
-      <h1 class="site-title">My Website</h1>
-      <nav>
-        <!-- Each <a> is a link. "href" is where the link goes. -->
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="header-inner">
+        <a class="logo" href="index.html">HOFFER WAREHOUSES <span>TOLEDO, OH</span></a>
+        <nav>
+          <!-- class="current" underlines the page we're on -->
+          <a href="index.html" class="current">Home</a>
+          <a href="services.html">Services</a>
+          <a href="history.html">History</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
     </header>
 
+    <!-- ===== BIG PHOTO BANNER ===== -->
+    <!-- The photo itself is set in style.css, under .hero -->
+    <div class="hero">
+      <h1>Affordable Warehousing</h1>
+      <p>Starting as low as $0.15 per square foot</p>
+      <a class="button" href="contact.html">Contact us</a>
+    </div>
+
     <main>
-      <section class="hero">
-        <h2>Welcome back!</h2>
-        <p>This website is being rebuilt. Check back soon.</p>
+      <!-- ===== THREE REASONS ===== -->
+      <section>
+        <div class="cards">
+          <div class="card">
+            <h3>Centrally Located</h3>
+            <p>
+              On the outskirts of downtown Toledo, less than a mile from I-75
+              and the Anthony Wayne Trail, making it very accessible and easy
+              to get in and out.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Experienced</h3>
+            <p>
+              With over 60 years in the warehousing business, Hoffer Warehouses
+              can help with your warehousing needs. We can accommodate
+              short-term and long-term storage, yarding trailers and much more.
+              We have high ceilings and clean, dry space.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Affordable</h3>
+            <p>
+              With space starting at just 15 cents a square foot, Hoffer
+              Warehouses is one of the more affordable choices in the city.
+            </p>
+          </div>
+        </div>
       </section>
 
+      <!-- ===== PHOTOS ===== -->
       <section>
-        <h2>About this site</h2>
-        <!-- <p> means "paragraph". -->
-        <p>
-          This is a starter page. Once the old site's files are in the
-          <code>old-site</code> folder, we will move the real content in here.
-        </p>
-        <!-- <ul> is a bulleted list; each <li> is one item in it. -->
-        <ul>
-          <li>Item one</li>
-          <li>Item two</li>
-          <li>Item three</li>
-        </ul>
+        <h2>Inside the warehouse</h2>
+        <div class="gallery">
+          <img src="images/warehouse-interior.jpg"
+               alt="Large warehouse floor with red support columns and rows of stored goods on pallets">
+          <img src="images/pallet-storage.jpg"
+               alt="Tall stacks of wooden pallets on a clean concrete floor">
+        </div>
       </section>
     </main>
 
+    <!-- ===== FOOTER (same on every page) ===== -->
     <footer class="site-footer">
-      <!-- &copy; is a code for the © symbol. -->
-      <p>&copy; 2026 My Website</p>
+      <p><strong>HOFFER WAREHOUSES</strong></p>
+      <p>359 Hamilton Street, Toledo, OH 43604</p>
+      <p><a href="tel:+14192416001">419-241-6001</a> &middot; <a href="mailto:sales@hofferwarehouses.com">sales@hofferwarehouses.com</a></p>
     </footer>
   </body>
 </html>
