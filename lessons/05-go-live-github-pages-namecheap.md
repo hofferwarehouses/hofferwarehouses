@@ -10,7 +10,7 @@ request first (see Lesson 4).
 
 ## Part A: Turn on GitHub Pages
 
-1. On GitHub, open the repo `ronniereddot/rondeposit`.
+1. On GitHub, open the repo `hofferwarehouses/hofferwarehouses`.
 2. GitHub Pages is free for **public** repositories. If the repo is private,
    either make it public (**Settings → General →** scroll to
    **Danger Zone → Change visibility**) or use a paid GitHub plan. A public repo
@@ -37,13 +37,13 @@ Until Part B is done, GitHub will report a DNS problem. That's expected.
    delete any leftover records pointing to Turbify or Yahoo.
 4. Add these records. Click **Add New Record** for each one:
 
-   | Type     | Host  | Value                     |
-   |----------|-------|---------------------------|
-   | A Record | `@`   | `185.199.108.153`         |
-   | A Record | `@`   | `185.199.109.153`         |
-   | A Record | `@`   | `185.199.110.153`         |
-   | A Record | `@`   | `185.199.111.153`         |
-   | CNAME    | `www` | `ronniereddot.github.io.` |
+   | Type     | Host  | Value                         |
+   |----------|-------|-------------------------------|
+   | A Record | `@`   | `185.199.108.153`             |
+   | A Record | `@`   | `185.199.109.153`             |
+   | A Record | `@`   | `185.199.110.153`             |
+   | A Record | `@`   | `185.199.111.153`             |
+   | CNAME    | `www` | `hofferwarehouses.github.io.` |
 
    Leave TTL on **Automatic**. `@` means `hofferwarehouses.com` without the
    `www`, and the `www` row covers `www.hofferwarehouses.com`. With both, either

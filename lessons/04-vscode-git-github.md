@@ -3,7 +3,7 @@
 ## Words to know
 
 - **Repository ("repo")**: a project folder that Git tracks. This one is
-  `ronniereddot/rondeposit` on GitHub.
+  `hofferwarehouses/hofferwarehouses` on GitHub.
 - **Commit**: a saved snapshot of your files, with a short message describing
   what changed. You can return to any commit later.
 - **Push**: send your commits from your computer up to GitHub.
@@ -28,7 +28,7 @@
 
 3. **Clone this repo:** in VS Code, press `Ctrl+Shift+P` (`Cmd+Shift+P` on a
    Mac), type **Git: Clone**, press Enter, then choose **Clone from GitHub**.
-   Sign in to GitHub when asked, pick `ronniereddot/rondeposit`, and choose a
+   Sign in to GitHub when asked, pick `hofferwarehouses/hofferwarehouses`, and choose a
    folder such as `Documents/websites`. Click **Open** when it asks.
 4. Recommended extension: click the Extensions icon (four squares) on the left
    and install **Live Server**. Then right-click `index.html` →
