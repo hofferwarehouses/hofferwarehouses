@@ -30,7 +30,7 @@ the most common CSS mistake. When a style "does nothing", check for one first.
 | Selector | Matches | Example HTML |
 |----------|---------|--------------|
 | `p` | every `<p>` | `<p>` |
-| `.hero` | anything with `class="hero"` | `<section class="hero">` |
+| `.hero` | anything with `class="hero"` | `<div class="hero">` |
 | `nav a` | `<a>` tags inside a `<nav>` | |
 | `a:hover` | a link while the mouse is over it | |
 
@@ -71,10 +71,10 @@ is double. Using `rem` keeps things in proportion on any screen.
 At the top of `style.css`, the `:root` block defines colors once:
 
 ```css
---main-color: #1f4e79;
+--brick: #8b3a2b;
 ```
 
-and later rules use them with `var(--main-color)`. Change the variable and
+and later rules use them with `var(--brick)`. Change the variable and
 every place that uses it changes too.
 
 ## A browser superpower: Developer Tools
@@ -86,12 +86,17 @@ it's a safe place to experiment. Copy anything you like back into `style.css`.
 
 ## Exercises
 
-1. Change `--main-color` and `--accent-color` to your brand's colors.
-2. Change the `font-family` on `body` to `Arial, Helvetica, sans-serif`.
+1. Change `--brick` at the top of `style.css` to `#1f4e79` (dark blue).
+   Every button, card edge and heading changes at once. Change it back
+   afterwards (or keep it, if you like it).
+2. Change the `font-family` on `body` to `Georgia, serif`.
    How does the feel of the site change?
 3. Make the footer text bigger.
-4. Add a new class: in `about.html`, write
-   `<p class="highlight">Something important</p>`, then in `style.css` add a
-   `.highlight` rule that gives it a yellow background and some padding.
+4. Add a new class: in `index.html`, write
+   `<p class="highlight">Now leasing!</p>` just under the cards, then in
+   `style.css` add a `.highlight` rule that gives it a yellow background and
+   some padding.
+5. Find the `@media` rule at the bottom of `style.css`. In your browser,
+   make the window narrow and watch the layout switch to its phone version.
 
 Next: [Lesson 4: VS Code, Git and GitHub](04-vscode-git-github.md)

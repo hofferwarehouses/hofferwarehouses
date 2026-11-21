@@ -1,8 +1,8 @@
-# Website Resurrection Project
+# Hoffer Warehouses website
 
-This project rebuilds an old Turbify website as a plain HTML/CSS site. It is
-hosted free on **GitHub Pages** and served at the original domain, which is
-registered at **Namecheap**.
+The website for **www.hofferwarehouses.com**, rebuilt from the old Turbify
+site as plain HTML and CSS. It's hosted free on **GitHub Pages**, and the
+domain is registered at **Namecheap**.
 
 It's also a learning project. Every file is commented, and the `lessons`
 folder teaches the basics step by step. The same skills work for any future
@@ -12,48 +12,55 @@ website.
 
 ```
 rondeposit/
-├── index.html      ← the home page (start here)
+├── index.html      ← Home page
+├── services.html   ← Services page
+├── history.html    ← History page
+├── contact.html    ← Contact page
 ├── css/
-│   └── style.css   ← the look of the whole site
-├── images/         ← photos and logos used by the site
-├── old-site/       ← the original Turbify files, kept untouched for reference
+│   └── style.css   ← the look of every page (colors, fonts, layout)
+├── images/         ← the three photos used on the site
+├── CNAME           ← tells GitHub Pages the domain name (don't delete)
+├── robots.txt      ← instructions for search engines
+├── sitemap.xml     ← list of pages, for search engines
+├── old-site/       ← the original Turbify files, kept for reference only
 └── lessons/        ← beginner lessons, read them in order
 ```
 
+## How the site was rebuilt
+
+Each old Turbify page was about 5,000 lines long. Nearly all of that was
+Turbify's own editor machinery: scripts, slideshow code and styles for features
+the site didn't use. The real content was a few paragraphs per page. So instead
+of copying those files, the content (text, address, phone, email and photos)
+was moved into four short pages that share one stylesheet. Open
+`old-site/index.html` and the new `index.html` side by side in VS Code to
+compare.
+
+Small changes made along the way:
+
+- Fixed a typo ("quipped" → "equipped") and some punctuation.
+- The photos were stored on Google's servers, not in the Turbify files. They
+  were downloaded into `images/` so the site no longer depends on them.
+- The old contact form needed Turbify's servers to work, so it was replaced
+  with phone and email links. See "Ideas for later" below.
+
 ## The plan
 
-- [ ] **0. Create the `main` branch** (see below)
-- [ ] **1. Upload the old Turbify files** into `old-site/` (see below)
-- [ ] **2. Learn the basics**: lessons 1–3 (how websites work, HTML, CSS)
-- [ ] **3. Set up VS Code + Git** on your computer: lesson 4
-- [ ] **4. Rebuild the pages** using the old content, one page at a time
-- [ ] **5. Go live** at your domain: lesson 5 (GitHub Pages + Namecheap)
+- [x] **0. Create the `main` branch**
+- [x] **1. Upload the old Turbify files** into `old-site/`
+- [x] **2. Rebuild the pages** from the old content
+- [ ] **3. Learn the basics**: lessons 1–3 (how websites work, HTML, CSS)
+- [ ] **4. Set up VS Code + Git** on your computer: lesson 4
+- [ ] **5. Go live** at www.hofferwarehouses.com: lesson 5
 
-### Step 0: Create the `main` branch (one time only)
+## Ideas for later (good practice projects)
 
-Right now the repo has a single branch with a long name. The live site
-will come from a branch called `main`, so create it first:
-
-1. Go to <https://github.com/ronniereddot/rondeposit>.
-2. Click the branch dropdown (top left, showing
-   `claude/turbify-website-resurrection-hxqgnb`).
-3. Type `main` in the box, then click **Create branch main from
-   claude/turbify-website-resurrection-hxqgnb**.
-4. Go to **Settings → General → Default branch**, click the ⇄ arrows, choose
-   `main`, then click **Update** and confirm.
-
-### Step 1: Upload your old files (easiest way, no tools needed)
-
-1. Go to <https://github.com/ronniereddot/rondeposit>. Make sure the branch
-   dropdown says `main`.
-2. Click into the `old-site` folder.
-3. Click **Add file → Upload files**, then drag in your Turbify files and
-   folders. If they're in a `.zip`, unzip it first.
-4. At the bottom, write a message like `Add original Turbify files`, then click
-   **Commit changes**.
-
-GitHub's web upload accepts up to 100 files at a time. If you have more, upload
-in batches or use VS Code (lesson 4).
+- **A contact form** using a free service like Formspree (formspree.io), so
+  messages arrive by email.
+- **More photos**, such as loading docks, office space and the building's
+  history.
+- **A "404" page**, for visitors who mistype an address: make a `404.html`
+  and GitHub Pages will show it automatically.
 
 ## Lessons
 

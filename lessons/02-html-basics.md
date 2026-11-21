@@ -79,16 +79,25 @@ spelling and remember that **capital letters matter** on web servers:
 
 ## Exercises
 
-1. Change the `<title>` and the `<h1>` to your website's name. Save, then
-   refresh the page in your browser.
-2. Replace "Item one / two / three" with three real things about your site.
-3. The menu links to `about.html`, which doesn't exist yet, so clicking it
-   gives an error. Make it:
-   - In VS Code, right-click `index.html` → **Copy**, then paste. Rename the
-     copy to `about.html`.
-   - Change the content inside `<main>` to be about you or your business.
+1. In `history.html`, find the paragraph about the Huebner Brewery and add a
+   second `<p>` paragraph after it with something you know about the building.
+   Save, then refresh the page in your browser.
+2. In `services.html`, add a fifth card. Copy one whole
+   `<div class="card"> ... </div>` block, paste it after the last one, and
+   change its heading and text. Notice how the layout makes room for it by
+   itself.
+3. Make a new page:
+   - In VS Code, right-click `history.html` → **Copy**, then paste. Rename the
+     copy to `test.html`.
+   - Change the `<title>` and the content inside `<main>`.
+   - Add a link to it in its own menu: `<a href="test.html">Test</a>`.
    - Open it in the browser and test the menu links in both directions.
+   - Delete `test.html` when you're done (or keep it as a real page, but then
+     add the link to the menu on **every** page).
 4. Put a photo in the `images` folder and show it with an `<img>` tag. Don't
    forget the `alt` text.
+
+You can practice freely: nothing changes on the live website until you commit
+and push (Lesson 4).
 
 Next: [Lesson 3: CSS basics](03-css-basics.md)
