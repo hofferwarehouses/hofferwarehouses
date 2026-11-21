@@ -11,7 +11,7 @@ website.
 ## What's in this folder
 
 ```
-rondeposit/
+hofferwarehouses/
 ├── index.html      ← Home page
 ├── services.html   ← Services page
 ├── history.html    ← History page
