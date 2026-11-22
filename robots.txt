@@ -1,4 +1,7 @@
+# robots.txt tells search engines (Google, Bing...) what not to list.
+# "User-agent: *" means these rules apply to every search engine.
+# The old Turbify files are kept for reference only, so hide them.
 User-agent: *
-Disallow:
+Disallow: /old-site/
 
 Sitemap: https://www.hofferwarehouses.com/sitemap.xml
