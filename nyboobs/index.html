@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NYBOOBS | Official Apparel</title>
+  <meta name="description" content="Official NYBOOBS t-shirts, hoodies and apparel.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header: the same on every page -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">NY<span>BOOBS</span></a>
+      <nav class="site-nav">
+        <a href="index.html" aria-current="page">Shop</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Big banner at the top. Change the words freely. -->
+    <section class="hero">
+      <h1>NY<span>BOOBS</span></h1>
+      <p>Original designs, printed on tees and hoodies. Straight out of New York.</p>
+      <a class="button" href="#shop">Shop now</a>
+    </section>
+
+    <!-- The product cards are added here by js/shop.js,
+         using the list in js/products.js. Edit products.js, not this. -->
+    <section class="section" id="shop">
+      <div class="container">
+        <h2>Shop</h2>
+        <div class="grid" id="product-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; 2026 NYBOOBS</span>
+      <span><a href="faq.html">Shipping &amp; returns</a> · <a href="mailto:hello@nyboobs.com">hello@nyboobs.com</a></span>
+    </div>
+  </footer>
+
+  <!-- products.js must load before shop.js -->
+  <script src="js/products.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

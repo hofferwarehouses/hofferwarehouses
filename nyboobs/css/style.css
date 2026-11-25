@@ -1,0 +1,194 @@
+/*
+  style.css — the look of the whole NYBOOBS site.
+  Every page links to this file, so a change here changes every page.
+*/
+
+/* ---------- Variables: change a color here and it changes everywhere ---------- */
+:root {
+  --ink: #111111;          /* near-black: header, footer, text */
+  --paper: #ffffff;        /* page background */
+  --pink: #ff2d87;         /* brand accent: buttons, highlights */
+  --pink-dark: #d81b6c;    /* button hover */
+  --grey: #f2f2f2;         /* card image background */
+  --muted: #666666;        /* softer text */
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+  min-height: 100vh;       /* keeps the footer at the bottom on short pages */
+  display: flex;
+  flex-direction: column;
+}
+
+main { flex: 1; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--pink-dark); }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.site-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+/* The wordmark. Swap this for your logo image later if you like:
+   <a class="logo" href="index.html"><img src="images/logo.png" alt="NYBOOBS"></a> */
+.logo {
+  color: var(--paper);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+}
+.logo span { color: var(--pink); }
+.logo img { height: 40px; width: auto; }
+
+.site-nav a {
+  color: var(--paper);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+.site-nav a:first-child { margin-left: 0; }
+.site-nav a:hover,
+.site-nav a[aria-current="page"] { color: var(--pink); }
+
+/* ---------- Hero banner on the home page ---------- */
+.hero {
+  background: var(--ink);
+  color: var(--paper);
+  text-align: center;
+  padding: 64px 16px 72px;
+  border-top: 1px solid #222;
+}
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 10vw, 6rem);  /* big on desktop, still fits a phone */
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+.hero h1 span { color: var(--pink); }
+.hero p {
+  margin: 16px auto 28px;
+  max-width: 520px;
+  color: #cccccc;
+  font-size: 1.1rem;
+}
+
+/* ---------- Buttons ---------- */
+.button {
+  display: inline-block;
+  background: var(--pink);
+  color: var(--paper);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+.button:hover { background: var(--pink-dark); }
+.button-disabled,
+.button-disabled:hover {
+  background: #cccccc;
+  color: #555555;
+  cursor: default;
+}
+
+/* ---------- Product grid ---------- */
+.section { padding: 48px 0; }
+.section h2 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+}
+
+.grid {
+  display: grid;
+  /* As many 240px-wide columns as fit; one column on small phones. */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+}
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;     /* every image shows as a square */
+  object-fit: cover;
+  background: var(--grey);
+}
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.card h3 { margin: 0; font-size: 1.1rem; }
+.card-meta { margin: 2px 0 0; color: var(--muted); }
+.card-sizes { margin: 6px 0 0; color: var(--muted); font-size: 0.85rem; }
+.card-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.price { font-weight: 800; font-size: 1.2rem; }
+
+/* ---------- Plain text pages (About, FAQ) ---------- */
+.prose { max-width: 720px; }
+.prose h1 { font-size: 2.2rem; text-transform: uppercase; margin-top: 0; }
+.prose h2 { font-size: 1.2rem; margin: 32px 0 4px; text-transform: none; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--ink);
+  color: #aaaaaa;
+  font-size: 0.9rem;
+  padding: 24px 0;
+}
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+.site-footer a { color: var(--paper); }

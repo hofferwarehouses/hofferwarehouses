@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <!-- Placeholder: replace with a photo or mockup of the real product. -->
+  <rect width="600" height="600" fill="#f2f2f2"/>
+  <path d="M215 110 L160 125 L80 190 L125 265 L170 235 L170 500 L430 500 L430 235 L475 265 L520 190 L440 125 L385 110 Q300 165 215 110 Z" fill="#111111" stroke="#d0d0d0" stroke-width="3"/>
+  <text x="300" y="300" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="46" fill="#ffffff">NY<tspan fill="#ff2d87">BOOBS</tspan></text>
+  <text x="300" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#999">Your design here</text>
+</svg>
